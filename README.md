@@ -67,3 +67,27 @@ will become
 
 6) change the on-death drops
 
+	- Find the entity you wish to edit
+	- Find the dropFewItems class
+	- In that class their will be a return statement(the example is an Iron Golem)
+```code
+protected void dropFewItems(boolean par1, int par2)
+    {
+        int j = this.rand.nextInt(3);
+        int k;
+
+        for (k = 0; k < j; ++k)
+        {
+            this.dropItem(Block.plantRed.blockID, 1);
+        }
+
+        k = 3 + this.rand.nextInt(3);
+
+        for (int l = 0; l < k; ++l)
+        {
+            this.dropItem(Item.ingotIron.itemID, 1);
+        }
+    }
+```
+	- Look for the this.dropItem() method.
+	-Change the item specified in the function
