@@ -9,12 +9,12 @@ A collection of Minecraft Jar Hacks:
 
 2) make a SnowBall deadly when thrown
 
-open the net.minecraft.entity.projectile.EntitySnowball class
-find the onImpact() method
-change the 
-line byte b0 = 0;
-to be
-byte b0 = 127;
+- open the net.minecraft.entity.projectile.EntitySnowball class
+- find the onImpact() method
+- change the line 
+     byte b0 = 0;
+   to be
+     byte b0 = 127;
 
 3) make a SnowBall explode on impact when thrown
 
