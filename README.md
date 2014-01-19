@@ -15,7 +15,7 @@ Note: These are intended to be used in a local environment only, and for the pur
 this.fuse = 80;
 ```
 
-You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.
+- You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.
 
 ###To change the size of the explosion
 
@@ -45,12 +45,15 @@ You may then change this number to whatever you would like to increase or decrea
 - Paste the explode() method into the EntitySnowball class
 - Find the onImpact() method
 - Add a call to the explode() method just before setDead()
+  
 ```code
         if (!this.worldObj.isRemote) {
         	this.setDead();
         }
 ```
+  
 will become
+
 ```code
         if (!this.worldObj.isRemote){
                 this.explode();
@@ -62,6 +65,7 @@ will become
 
 - Open the net.minecraft.item.ItemBucket 
 - Add the method to the class
+
 ```code
 	public boolean hitEntity(ItemStack itemstack, EntityLivingBase target, EntityLivingBase player){
 		if(!target.worldObj.isRemote){
@@ -80,6 +84,7 @@ will become
 	- Find the dropFewItems class
 	- In that class their will be a return statement(the example is an Iron Golem)
 ```code
+
 protected void dropFewItems(boolean par1, int par2)
     {
         int j = this.rand.nextInt(3);
