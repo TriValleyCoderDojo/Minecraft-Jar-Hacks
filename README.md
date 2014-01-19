@@ -18,7 +18,7 @@ You may then change this number to whatever you would like to increase or decrea
 ###To change the size of the explosion
 
 
-2) make a SnowBall deadly when thrown
+## Make a SnowBall deadly when thrown
 
 - open the net.minecraft.entity.projectile.EntitySnowball class
 - find the onImpact() method
@@ -31,7 +31,7 @@ You may then change this number to whatever you would like to increase or decrea
      byte b0 = 127;
 ```
 
-3) make a SnowBall explode on impact when thrown
+## Make a SnowBall explode on impact when thrown
 
 - open the net.minecraft.entity.item.EntityTNTPrimed class
 
@@ -59,7 +59,7 @@ will become
         }
 ```
 
-4) make a Bucket throw an entity in the air when hit 
+## Make a Bucket throw an entity in the air when hit 
 
 - open the net.minecraft.item.ItemBucket 
 
@@ -74,9 +74,9 @@ will become
 	}
 ```
 
-5) make TNT throw WitherSkulls with right click
+## Make TNT throw WitherSkulls with right click
 
-6) change the on-death drops
+## Change the on-death drops
 
 	- Find the entity you wish to edit
 	- Find the dropFewItems class
