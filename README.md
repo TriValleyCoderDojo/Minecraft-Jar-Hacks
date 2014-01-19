@@ -18,13 +18,19 @@ byte b0 = 127;
 
 3) make a SnowBall explode on impact when thrown
 
-open the net.minecraft.entity.item.EntityTNTPrimed class
-find and copy the explode() method
-open the net.minecraft.entity.projectile.EntitySnowball class
-set the value of b0 back to 0 if you did hack #2
-paste the explode() method into the EntitySnowball class
-find the onImpact() method
-add a call to the explode() method just before setDead()
+- open the net.minecraft.entity.item.EntityTNTPrimed class
+
+- find and copy the explode() method
+
+- open the net.minecraft.entity.projectile.EntitySnowball class
+
+- set the value of b0 back to 0 if you did hack #2
+
+- paste the explode() method into the EntitySnowball class
+
+- find the onImpact() method
+
+- add a call to the explode() method just before setDead()
         if (!this.worldObj.isRemote)
         {
         	this.setDead();
@@ -37,8 +43,9 @@ will become
 
 4) make a Bucket throw an entity in the air when hit 
 
-open the net.minecraft.item.ItemBucket 
-add the method to the class
+- open the net.minecraft.item.ItemBucket 
+
+- add the method to the class
 	public boolean hitEntity(ItemStack itemstack, EntityLivingBase target, EntityLivingBase player){
 		if(!target.worldObj.isRemote){
 			target.motionY = 2.5;
