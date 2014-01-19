@@ -95,6 +95,11 @@ will become
 		return false;
 	}
 ```
+In case Eclipse does not automatically add the import statement for EntityLivingBase, you may need to manually add it
+
+```code
+import net.minecraft.entity.EntityLivingBase;
+```
 
 - Restart the server and try it out
 
