@@ -31,10 +31,12 @@ A collection of Minecraft Jar Hacks:
 - find the onImpact() method
 
 - add a call to the explode() method just before setDead()
+```code
         if (!this.worldObj.isRemote)
         {
         	this.setDead();
         }
+```
 will become
         if (!this.worldObj.isRemote)
         {
