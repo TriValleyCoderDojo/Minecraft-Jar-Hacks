@@ -95,7 +95,7 @@ will become
 		return false;
 	}
 ```
-In case Eclipse does not automatically add the import statement for EntityLivingBase, you may need to manually add it
+In case Eclipse does not automatically add the import statement for EntityLivingBase, you may need to manually add it.
 
 ```code
 import net.minecraft.entity.EntityLivingBase;
@@ -126,6 +126,15 @@ import net.minecraft.entity.EntityLivingBase;
 		}
 		return itemstack;
 	}
+```
+
+In case Eclipse does not automatically add the import statements for the new classes, you may need to manually add them.
+
+```code
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityWitherSkull;
+import net.minecraft.util.Vec3;
+import net.minecraft.world.World;
 ```
 
 - Restart the server and try it out
