@@ -16,9 +16,11 @@ this.fuse = 80;
 ```
 
 - You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.
+- Restart the server and try it out
 
 ###To change the size of the explosion
 
+- Stop the currently running server
 - Open the net.minecraft.entity.item.EntityTNTPrimed class
 - Find the explode() method and the variable f
 
@@ -27,10 +29,12 @@ float f = 4.0F;
 ```
 
 - You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.  Although you may not want to make it too large, because it will cause lag.  
+- Restart the server and try it out
 
 
 ## Make a SnowBall deadly when thrown
 
+- Stop the currently running server
 - Open the net.minecraft.entity.projectile.EntitySnowball class
 - Find the onImpact() method
 - Change the line 
@@ -45,8 +49,12 @@ float f = 4.0F;
      byte b0 = 127;
 ```
 
+- Restart the server and try it out
+
 ## Make a SnowBall explode on impact when thrown
 
+
+- Stop the currently running server
 - Open the net.minecraft.entity.item.EntityTNTPrimed class
 - Find and copy the explode() method
 - Open the net.minecraft.entity.projectile.EntitySnowball class
@@ -70,8 +78,11 @@ will become
         }
 ```
 
+- Restart the server and try it out
+
 ## Make a Bucket throw an entity in the air when hit 
 
+- Stop the currently running server
 - Open the net.minecraft.item.ItemBucket class
 - Add the method to the class
 
@@ -85,8 +96,11 @@ will become
 	}
 ```
 
+- Restart the server and try it out
+
 ## Make a Shovel (any of them) throw WitherSkulls with right clicked
 
+- Stop the currently running server
 - Open the net.minecraft.item.ItemSpade class
 - Add the method to the class
 
@@ -109,11 +123,15 @@ will become
 	}
 ```
 
+- Restart the server and try it out
+
 ## Change the on-death drops
 
-	- Find the entity you wish to edit
-	- Find the dropFewItems class
-	- In that class their will be a return statement(the example is an Iron Golem)
+- Stop the currently running server
+- Find the entity you wish to edit
+- Find the dropFewItems class
+- In that class their will be a return statement(the example is an Iron Golem)
+
 ```code
 
 protected void dropFewItems(boolean par1, int par2)
@@ -134,5 +152,7 @@ protected void dropFewItems(boolean par1, int par2)
         }
     }
 ```
-	- Look for the this.dropItem() method.
-	-Change the item specified in the function
+
+- Look for the this.dropItem() method.
+- Change the item specified in the function
+- Restart the server and try it out
