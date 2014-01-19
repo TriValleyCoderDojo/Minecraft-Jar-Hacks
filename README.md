@@ -12,9 +12,13 @@ A collection of Minecraft Jar Hacks:
 - open the net.minecraft.entity.projectile.EntitySnowball class
 - find the onImpact() method
 - change the line 
+```code
      byte b0 = 0;
+```
    to be
+```code
      byte b0 = 127;
+```
 
 3) make a SnowBall explode on impact when thrown
 
@@ -32,22 +36,24 @@ A collection of Minecraft Jar Hacks:
 
 - add a call to the explode() method just before setDead()
 ```code
-        if (!this.worldObj.isRemote)
-        {
+        if (!this.worldObj.isRemote) {
         	this.setDead();
         }
 ```
 will become
-        if (!this.worldObj.isRemote)
-        {
+```code
+        if (!this.worldObj.isRemote){
+                this.explode();
         	this.setDead();
         }
+```
 
 4) make a Bucket throw an entity in the air when hit 
 
 - open the net.minecraft.item.ItemBucket 
 
 - add the method to the class
+```code
 	public boolean hitEntity(ItemStack itemstack, EntityLivingBase target, EntityLivingBase player){
 		if(!target.worldObj.isRemote){
 			target.motionY = 2.5;
@@ -55,6 +61,7 @@ will become
 		}
 		return false;
 	}
+```
 
 5) make TNT throw WitherSkulls with right click
 
