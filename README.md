@@ -19,6 +19,15 @@ this.fuse = 80;
 
 ###To change the size of the explosion
 
+- Open the net.minecraft.entity.item.EntityTNTPrimed class
+- Find the explode() method and the variable f
+
+```code
+float f = 4.0F;
+```
+
+- You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.  Although you may not want to make it too large, because it will cause lag.  
+
 
 ## Make a SnowBall deadly when thrown
 
