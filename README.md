@@ -72,7 +72,7 @@ will become
 
 ## Make a Bucket throw an entity in the air when hit 
 
-- Open the net.minecraft.item.ItemBucket 
+- Open the net.minecraft.item.ItemBucket class
 - Add the method to the class
 
 ```code
@@ -85,7 +85,29 @@ will become
 	}
 ```
 
-## Make TNT throw WitherSkulls with right click
+## Make a Shovel (any of them) throw WitherSkulls with right clicked
+
+- Open the net.minecraft.item.ItemSpade class
+- Add the method to the class
+
+```code
+	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer) {
+		itemstack.damageItem(10, entityplayer);
+		if (!world.isRemote) {
+			Vec3 look = entityplayer.getLookVec();
+			EntityWitherSkull witherSkull = new EntityWitherSkull(world, entityplayer, 1, 1, 1);
+			witherSkull.setPosition(
+					entityplayer.posX + look.xCoord * 5,
+					entityplayer.posY + look.yCoord * 5,
+					entityplayer.posZ + look.zCoord * 5);
+			witherSkull.accelerationX = look.xCoord * 0.1;
+			witherSkull.accelerationY = look.yCoord * 0.1;
+			witherSkull.accelerationZ = look.zCoord * 0.1;
+			world.spawnEntityInWorld(witherSkull);
+		}
+		return itemstack;
+	}
+```
 
 ## Change the on-death drops
 
