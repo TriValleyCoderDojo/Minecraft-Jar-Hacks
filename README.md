@@ -1,10 +1,21 @@
 Minecraft-Jar-Hacks
 ===================
 
-A collection of Minecraft Jar Hacks:
+This is a collection Jar Hacks for Minecraft.  You can follow these steps to create some simple Jar Hacks and get started with customizing Minecraft.  These will need to be done inside of the Forge Mod Loader.
 
-1) change TNT, fuse and explosion
+Note: These are intended to be used in a local environment only, and for the purpose of learning.  In general, Jar Hacks are frowned upon and are not maintainable. 
 
+## Change TNT, fuse and explosion
+
+###To change the fuse length
+open the net.minecraft.entity.item.EntityTNTPrimed class
+find the line where the fuse time gets set
+```code
+this.fuse = 80;
+```
+You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.
+
+###To change the size of the explosion
 
 
 2) make a SnowBall deadly when thrown
