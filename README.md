@@ -10,9 +10,11 @@ Note: These are intended to be used in a local environment only, and for the pur
 ###To change the fuse length
 - Open the net.minecraft.entity.item.EntityTNTPrimed class
 - Find the line where the fuse time gets set
+
 ```code
 this.fuse = 80;
 ```
+
 You may then change this number to whatever you would like to increase or decrease the time it take for TNT to explode.
 
 ###To change the size of the explosion
@@ -23,10 +25,13 @@ You may then change this number to whatever you would like to increase or decrea
 - Open the net.minecraft.entity.projectile.EntitySnowball class
 - Find the onImpact() method
 - Change the line 
+   
 ```code
      byte b0 = 0;
 ```
+   
    to be
+   
 ```code
      byte b0 = 127;
 ```
