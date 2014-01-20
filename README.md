@@ -73,7 +73,7 @@ will become
 
 ```code
         if (!this.worldObj.isRemote){
-                this.explode();
+        	this.explode();
         	this.setDead();
         }
 ```
