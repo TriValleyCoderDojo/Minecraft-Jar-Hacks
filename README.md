@@ -103,7 +103,7 @@ import net.minecraft.entity.EntityLivingBase;
 
 - Restart the server and try it out
 
-## Make a Shovel (any of them) throw WitherSkulls with right clicked
+## Make a Shovel (any of them) throw WitherSkulls when right clicked
 
 - Stop the currently running server
 - Open the net.minecraft.item.ItemSpade class
@@ -142,26 +142,20 @@ import net.minecraft.world.World;
 ## Change the on-death drops
 
 - Stop the currently running server
-- Find the entity you wish to edit
-- Find the dropFewItems class
-- In that class their will be a return statement(the example is an Iron Golem)
+- Under the net.minecraft.entity.monster package, you will find a number of entities
+- Open the class for the entity you wish to edit
+- Find the dropFewItems() method
 
 ```code
 
-protected void dropFewItems(boolean par1, int par2)
-    {
+    protected void dropFewItems(boolean par1, int par2) {
         int j = this.rand.nextInt(3);
         int k;
-
-        for (k = 0; k < j; ++k)
-        {
+        for (k = 0; k < j; ++k) {
             this.dropItem(Block.plantRed.blockID, 1);
         }
-
         k = 3 + this.rand.nextInt(3);
-
-        for (int l = 0; l < k; ++l)
-        {
+        for (int l = 0; l < k; ++l) {
             this.dropItem(Item.ingotIron.itemID, 1);
         }
     }
@@ -169,4 +163,5 @@ protected void dropFewItems(boolean par1, int par2)
 
 - Look for the this.dropItem() method.
 - Change the item specified in the function
+- Or you can change the number of times it loops by changing i & k
 - Restart the server and try it out
