@@ -195,5 +195,7 @@ For example:
 this.addSmelting(Item.ingotIron.itemID, new ItemStack(Item.ingotGold), 1.0F);
 ```
 
-would smelt a gold ingot from an iron ingot
+would smelt a gold ingot from an iron ingot.  
+
+Note: Please becareful to avoid repeating the first item more than once, because it will confuse Minecraft. 
 
