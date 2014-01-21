@@ -190,6 +190,28 @@ Note: Please becareful to make sure you return a valid Item ID.
 
 ## Change the sound of a monster when it dies
 
+- Stop the currently running server
+- Open class net.minecraft.entity.monster.EntityWitch or whatever monster
+- Find the method getDeathSound()
+- Change the mapping to the ogg file for a different sound
+- Restart the server and try it out
+
+For example, changing 
+
+```code
+return "mob.witch.death";
+```
+
+to 
+
+```code
+return "mob.ghast.death";
+```
+
+would make the Witch sound like the Ghast.  
+
+The sounds are mapped to ogg files, and you can find them in the directory mcp\jars\assets\sound.  In case of the ghast there is a mob\ghast directory with a death.ogg file.  However, only other death sounds seem to work.  
+
 
 ## Change the max enchantment level of an item
 
