@@ -192,7 +192,7 @@ import net.minecraft.world.World;
 For example: 
 
 ```code
-this.addSmelting(Item.ingotIron.blockID, new ItemStack(Item.ingotGold), 1.0F);
+this.addSmelting(Item.ingotIron.itemID, new ItemStack(Item.ingotGold), 1.0F);
 ```
 
 would smelt a gold ingot from an iron ingot
