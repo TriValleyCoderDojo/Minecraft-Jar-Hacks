@@ -139,6 +139,9 @@ import net.minecraft.world.World;
 
 - Restart the server and try it out
 
+## Make zombie drop something other than rotten flesh
+
+
 ## Change the on-death drops
 
 - Stop the currently running server
@@ -165,3 +168,15 @@ import net.minecraft.world.World;
 - Change the item specified in the function
 - Or you can change the number of times it loops by changing i & k
 - Restart the server and try it out
+
+
+## Change the sound of a monster when it dies
+
+
+## Change the max enchantment level of an item
+
+
+## Add a new furnace recipe
+
+
+
