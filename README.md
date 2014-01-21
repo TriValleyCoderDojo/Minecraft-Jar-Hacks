@@ -180,5 +180,20 @@ import net.minecraft.world.World;
 
 ## Add a new furnace recipe
 
+- Stop the currently running server
+- Open class net.minecraft.item.crafting.FurnaceRecipes
+- Find the private constructor, private FurnaceRecipes()
+- Add a new recipe, the parameters are:
+   1. item to put into the furnace
+   2. item to get from smelting
+   3. experience points to get
+- Restart the server and try it out
 
+For example: 
+
+```code
+this.addSmelting(Item.ingotIron.blockID, new ItemStack(Item.ingotGold), 1.0F);
+```
+
+would smelt a gold ingot from an iron ingot
 
