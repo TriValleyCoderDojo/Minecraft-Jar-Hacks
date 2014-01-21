@@ -3,7 +3,7 @@ Minecraft-Jar-Hacks
 
 This is a collection Jar Hacks for Minecraft.  You can follow these steps to create some simple Jar Hacks and get started with customizing Minecraft.  These will need to be done inside of the Forge Mod Loader.
 
-Note: These are intended to be used in a local environment only, and for the purpose of learning only.  In general, Jar Hacks are frowned upon and are not maintainable. Never attempt to distribnute a Jar Hack. 
+Note: These are intended to be used in a local environment only, and for the purpose of learning only.  In general, Jar Hacks are frowned upon and are not maintainable. Never attempt to distribute a Jar Hack. 
 
 Additional information is available on the [wiki](https://github.com/TriValleyCoderDojo/Minecraft-Jar-Hacks/wiki)
 
