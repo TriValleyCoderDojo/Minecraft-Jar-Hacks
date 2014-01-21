@@ -5,6 +5,8 @@ This is a collection Jar Hacks for Minecraft.  You can follow these steps to cre
 
 Note: These are intended to be used in a local environment only, and for the purpose of learning only.  In general, Jar Hacks are frowned upon and are not maintainable. Never attempt to distribnute a Jar Hack. 
 
+Additional information is available on the [wiki](https://github.com/TriValleyCoderDojo/Minecraft-Jar-Hacks/wiki)
+
 ## Change TNT, fuse and explosion
 
 ###To change the fuse length
