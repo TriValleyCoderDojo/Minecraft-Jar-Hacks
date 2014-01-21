@@ -143,6 +143,22 @@ import net.minecraft.world.World;
 
 ## Make zombie drop something other than rotten flesh
 
+- Stop the currently running server
+- Open the net.minecraft.entity.monster.EntityZombie class
+- Find the method getDropItemId()
+- Change the return itemId
+- Restart the server and try it out
+
+For example:
+
+```code
+return Item.axeDiamond.itemID;
+```
+
+would make the Zombie drop diamond axes.
+
+Note: Please becareful to make sure you return a valid Item ID. 
+
 
 ## Change the on-death drops
 
