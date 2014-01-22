@@ -7,7 +7,7 @@ Note: These are intended to be used in a local environment only, and for the pur
 
 #Additional Information:
 - Setup FML, helpful hints and tips on the [Wiki](https://github.com/TriValleyCoderDojo/Minecraft-Jar-Hacks/wiki)
-- Make a deployable Mod [RedDiamond Tutorial](http://www.lopakalogic.com/articles/minecraft-articles/minecraft-mods-forge)
+- Make a deployable Mod, try the [RedDiamond Tutorial](http://www.lopakalogic.com/articles/minecraft-articles/minecraft-mods-forge)
 
 ## Change TNT, fuse and explosion
 
