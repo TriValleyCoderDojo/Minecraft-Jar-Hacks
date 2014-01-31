@@ -6,8 +6,8 @@ This is a collection Jar Hacks for Minecraft.  You can follow these steps to cre
 Note: These are intended to be used in a local environment only, and for the purpose of learning only.  In general, Jar Hacks are frowned upon and are not maintainable. Never attempt to distribute a Jar Hack. 
 
 #Additional Information:
-- Setup FML, helpful hints and tips on the [Wiki](https://github.com/TriValleyCoderDojo/Minecraft-Jar-Hacks/wiki)
-- Make a deployable Mod, try the [RedDiamond Tutorial](http://www.lopakalogic.com/articles/minecraft-articles/minecraft-mods-forge)
+- **Setup Java, Eclipse & FML**, helpful hints and tips on the [Wiki](https://github.com/TriValleyCoderDojo/Minecraft-Jar-Hacks/wiki)
+- **Make a deployable Mod**, try the [RedDiamond Tutorial](http://www.lopakalogic.com/articles/minecraft-articles/minecraft-mods-forge)
 
 ## Change TNT, fuse and explosion
 
