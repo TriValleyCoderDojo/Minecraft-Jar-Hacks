@@ -232,6 +232,14 @@ public int getMaxLevel()
     }
 ```
 
+
+```code
+public int getMaxLevel()
+    {
+        return 100;
+    }
+```
+
 ## Add a new furnace recipe
 
 - Stop the currently running server
