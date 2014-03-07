@@ -217,8 +217,20 @@ The sounds are mapped to ogg files, and you can find them in the directory mcp\j
 
 ## Change the max enchantment level of an item
 
-To be done
+- Stop Minecraft.
+- Open class net.minecraft.enchantment
+- Find the method GetMaxLevel
+- Change the number after the return statement to something else, like 100.
+- Warning: Some enchantments(looting and efficiency) cause lag at high levels. I would reccommend against levels above 50.
+- Test. It works if, when you search the name of that enchantment, enchanted books ranging from level 1 to your specified level appear.
 
+
+```code
+public int getMaxLevel()
+    {
+        return 5;
+    }
+```
 
 ## Add a new furnace recipe
 
