@@ -261,3 +261,21 @@ would smelt a gold ingot from an iron ingot.
 
 Note: Please becareful to avoid repeating the first item more than once, because it will confuse Minecraft. 
 
+### Snow golems make ice
+
+**Goal**: To make snow golems place ice underneath them wherever they go.
+
+**Instructions**: 
+
+* On line 78 in the class EntitySnowman, there is a statement saying `this.worldObj.setBlock(j, k, l, Block.snow.blockID);`. Change the `snow` to `ice`, or whatever block you want. Then change the `k` to `k - 1`. Remember that you can press `Ctrl + Space` to pull up a list of blocks. 
+* On line 76, it says `if (this.worldObj.getBlockId(j, k, l) == 0 && this.worldObj.getBiomeGenForCoords(j, l).getFloatTemperature() < 0.8F && 
+Block.snow.canPlaceBlockAt(this.worldObj, j, k, l))`. Change the `0.8F` to `100.0F`. This makes sure the snow golem can place ice in any biome.
+* Change the `Block.snow.canPlaceBlockAt` to `Block.ice.canPlaceBlockAt`, or instead of ice, the block you specified.
+* On line 65, change the temperature value from 1.0F to 100.0F - This makes sure your snow golem doesn't die in biomes that are too hot.
+
+**Gameplay**: 
+
+* Open your inventory and search for "Snow". There will be two Snows, but you want the bigger one, not the flat-looking one.
+* Then, search for a "Pumpkin".
+* Place a Snow on top of another one, then put a Pumpkin on top. This will spawn a snow golem, which will place the block you specified underneath it.
+
