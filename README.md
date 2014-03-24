@@ -307,7 +307,7 @@ this.dropItem(Item.diamond.itemID, 1);
 this.timeUntilNextEgg = this.rand.nextInt(6) + 6;
 ```
 
-would make our chicken lay diamonds instead of eggs, and they will come out in almost a stream.  
+would make the chickens lay diamonds instead of eggs, and they will come out in almost a stream.  
 
 The sounds are mapped to ogg files, and you can find them in the directory mcp\jars\assets\sound.  In case of the ghast there is a mob\ghast directory with a death.ogg file.  However, only other death sounds seem to work. 
 
