@@ -279,3 +279,36 @@ Block.snow.canPlaceBlockAt(this.worldObj, j, k, l))`. Change the `0.8F` to `100.
 * Open your inventory and search for "Snow". There will be two Snows, but you want the bigger one, not the flat-looking one.
 * Then, search for a "Pumpkin".
 * Place a Snow on top of another one, then put a Pumpkin on top. This will spawn a snow golem, which will place the block you specified underneath it.
+
+
+## Make a Chicken Lay Diamonds Really Fast
+
+- Stop the currently running server
+- Open class the net.minecraft.entity.passive.EntityChicken
+- Find the method onLivingUpdate()
+- Change the dropped item
+- Find everywhere the variable timeUntilNextEgg gets
+- Change the to make it more often
+- Restart the server and try it out
+
+For example, changing 
+
+```code
+this.dropItem(Item.egg.itemID, 1);
+...
+this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
+```
+
+to 
+
+```code
+this.dropItem(Item.diamond.itemID, 1);
+...
+this.timeUntilNextEgg = this.rand.nextInt(6) + 6;
+```
+
+would make our chicken lay diamonds instead of eggs, and they will come out in almost a stream.  
+
+The sounds are mapped to ogg files, and you can find them in the directory mcp\jars\assets\sound.  In case of the ghast there is a mob\ghast directory with a death.ogg file.  However, only other death sounds seem to work. 
+
+
