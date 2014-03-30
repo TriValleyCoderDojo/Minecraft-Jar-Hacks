@@ -309,6 +309,5 @@ this.timeUntilNextEgg = this.rand.nextInt(6) + 6;
 
 would make the chickens lay diamonds instead of eggs, and they will come out in almost a stream.  
 
-The sounds are mapped to ogg files, and you can find them in the directory mcp\jars\assets\sound.  In case of the ghast there is a mob\ghast directory with a death.ogg file.  However, only other death sounds seem to work. 
-
+**Note:** the `timeUntilNextEgg` needs to be changed in two places: once at the top of the class in the EntityChicken() constructor and again in the onLivingUpdate() method near the bottom.  The first one is used for the intial time it takes for the chicken to start laying diamonds, and the second one is for all the times after that.  
 
