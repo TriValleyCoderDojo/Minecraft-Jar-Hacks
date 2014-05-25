@@ -322,8 +322,11 @@ would make the chickens lay diamonds instead of eggs, and they will come out in 
 - Stop the currently running server
 - Open the net.minecraft.entity.projectile.EntityArrow class
 - Find the method onUpdate(), about line 186
-- Find the place in the code where the damage gets inflicted, about line 360
-- Insert the following line to cause an explosion
+- Find the place in the code where the damage gets inflicted, about line 360 looks like:
+```code
+this.playSound("random.bowhit", 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
+```
+- Insert the following line after the above to cause an explosion
 ```code
 this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 2.0F, true);
 ```
