@@ -243,6 +243,28 @@ Note: You can change the kind of trail from snow to ice by changing
 
 Source: Arun Gupta
 
+## Change the max enchantment level of an item
+
+Normally, when you attempt to enchant an item that you are holding in the hotbar with the command:
+
+/enhanct <player> <enchantment_id> <level>
+
+you will have a limit on the maximum level that can be used (eg: 2). You can change the level to something
+higher if you would like.  
+
+- Stop Minecraft.
+- Open class net.minecraft.enchantment.Enchantment
+- At the top of this class all of the different enchantments are created
+- We will change the level for KnockBack, which has an id of 19, see line 53
+- Open the EnchantmentKnockback class
+- Find the method getMaxLevel()
+- Change the default number (2) in return statement to something else, like 10.
+- Restart the server and you will be able to use a level of 10 for KnockBack
+
+Warning: Some enchantments(looting and efficiency) cause lag at high levels. I would reccommend against levels above 50.
+
+Source: Arun Gupta
+
 ## Add a new furnace recipe
 
 - Stop the currently running server
