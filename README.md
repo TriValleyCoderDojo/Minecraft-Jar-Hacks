@@ -332,4 +332,5 @@ this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 2.0F, true)
 ```
 - Restart the server and try it out
 
+Note: You can experiment with the size of the explosiion by change the value of 2.0F to some other number
 
