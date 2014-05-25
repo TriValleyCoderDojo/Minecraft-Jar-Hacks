@@ -218,7 +218,7 @@ The sounds are mapped to ogg files, and you can find them in the directory mcp\j
 ## Change the max enchantment level of an item
 
 - Stop Minecraft.
-- Open class net.minecraft.enchantment
+- Open class net.minecraft.enchantment.Enchantment
 - Find the method GetMaxLevel
 - Change the number after the return statement to something else, like 100.
 - Warning: Some enchantments(looting and efficiency) cause lag at high levels. I would reccommend against levels above 50.
@@ -310,4 +310,17 @@ this.timeUntilNextEgg = this.rand.nextInt(6) + 6;
 would make the chickens lay diamonds instead of eggs, and they will come out in almost a stream.  
 
 **Note:** the `timeUntilNextEgg` needs to be changed in two places: once at the top of the class in the EntityChicken() constructor and again in the onLivingUpdate() method near the bottom.  The first one is used for the intial time it takes for the chicken to start laying diamonds, and the second one is for all the times after that.  
+
+## Make arrows explode when they hit an entity
+
+- Stop the currently running server
+- Open the net.minecraft.entity.projectile.EntityArrow class
+- Find the method onUpdate(), about line 186
+- Find the place in the code where the damage gets inflicted, about line 360
+- Insert the following line to cause an explosion
+```code
+this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 2.0F, true);
+```
+- Restart the server and try it out
+
 
