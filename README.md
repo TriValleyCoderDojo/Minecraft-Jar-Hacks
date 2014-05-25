@@ -262,23 +262,32 @@ would smelt a gold ingot from an iron ingot.
 Note: Please becareful to avoid repeating the first item more than once, because it will confuse Minecraft. 
 
 
-### 3. Snow golems make ice
+## Make snow golems leave a trail of snow (or ice) wherever they go
 
-**Purpose**: To make snow golems place ice underneath them wherever they go.
+- Stop the currently running server
+- Open class et.minecraft.entity.monster.EntitySnowman
+- Find the method onLivingUpdate()
+- Scroll down to line 65, which will look like:
+```code
+if (this.worldObj.getBiomeGenForCoords(i, j).getFloatTemperature() > 1.0F)
+```
+- Change 1.0F to 100.0F so the snow golem can live in hot biomes
+- Scroll down to line 76, which will look like:
+```code
+if (this.worldObj.getBlockId(j, k, l) == 0 && this.worldObj.getBiomeGenForCoords(j, l).getFloatTemperature() < 0.8F && Block.snow.canPlaceBlockAt(this.worldObj, j, k, l))
+```
+- This line is checking the current temperature, change the 0.8F to 100.0F, which increases how it can be to place snow
+- Restart the server and try it out
 
-**Instructions**: 
+Note: You can change the kind of trail from snow to ice by changing
+- On line 76 Block.snow.canPlaceBlockAt to Block.ice.canPlaceBlockAt
+- On line 78 Block.snow.blockID to Block.ice.blockID
 
-* On line 78 in the class EntitySnowman in the package net.minecraft.entity.monster, there is a statement saying `this.worldObj.setBlock(j, k, l, Block.snow.blockID);`. Change the `snow` to `ice`, or whatever block you want. Then change the `k` to `k - 1`. Remember that you can press `Ctrl + Space` to pull up a list of blocks. 
-* On line 76, it says `if (this.worldObj.getBlockId(j, k, l) == 0 && this.worldObj.getBiomeGenForCoords(j, l).getFloatTemperature() < 0.8F && 
-Block.snow.canPlaceBlockAt(this.worldObj, j, k, l))`. Change the `0.8F` to `100.0F`. This makes sure the snow golem can place ice in any biome.
-* Change the `Block.snow.canPlaceBlockAt` to `Block.ice.canPlaceBlockAt`, or instead of ice, the block you specified.
-* On line 65, change the temperature value from 1.0F to 100.0F - This makes sure your snow golem doesn't die in biomes that are too hot.
+### Create a snow golem
 
-**Gameplay**: 
-
-* Open your inventory and search for "Snow". There will be two Snows, but you want the bigger one, not the flat-looking one.
-* Then, search for a "Pumpkin".
-* Place a Snow on top of another one, then put a Pumpkin on top. This will spawn a snow golem, which will place the block you specified underneath it.
+- You will need two blocks of Snow, and one Pumpkin
+- Stack the two Snow blocks on top of each other, and place the Pumpkin on the top
+- This will spawn a Snow golem
 
 
 ## Make a Chicken Lay Diamonds Really Fast
