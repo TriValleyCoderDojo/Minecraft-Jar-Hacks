@@ -240,27 +240,7 @@ public int getMaxLevel()
     }
 ```
 
-## Add a new furnace recipe
-
-- Stop the currently running server
-- Open class net.minecraft.item.crafting.FurnaceRecipes
-- Find the private constructor, private FurnaceRecipes()
-- Add a new recipe, the parameters are:
-   1. item to put into the furnace
-   2. item to get from smelting
-   3. experience points to get
-- Restart the server and try it out
-
-For example: 
-
-```code
-this.addSmelting(Item.ingotIron.itemID, new ItemStack(Item.ingotGold), 1.0F);
-```
-
-would smelt a gold ingot from an iron ingot.  
-
-Note: Please becareful to avoid repeating the first item more than once, because it will confuse Minecraft. 
-
+Source: Arun Gupta
 
 ## Make snow golems leave a trail of snow (or ice) wherever they go
 
@@ -288,6 +268,29 @@ Note: You can change the kind of trail from snow to ice by changing
 - You will need two blocks of Snow, and one Pumpkin
 - Stack the two Snow blocks on top of each other, and place the Pumpkin on the top
 - This will spawn a Snow golem
+
+Source: Arun Gupta
+
+## Add a new furnace recipe
+
+- Stop the currently running server
+- Open class net.minecraft.item.crafting.FurnaceRecipes
+- Find the private constructor, private FurnaceRecipes()
+- Add a new recipe, the parameters are:
+   1. item to put into the furnace
+   2. item to get from smelting
+   3. experience points to get
+- Restart the server and try it out
+
+For example: 
+
+```code
+this.addSmelting(Item.ingotIron.itemID, new ItemStack(Item.ingotGold), 1.0F);
+```
+
+would smelt a gold ingot from an iron ingot.  
+
+Note: Please becareful to avoid repeating the first item more than once, because it will confuse Minecraft. 
 
 
 ## Make a Chicken Lay Diamonds Really Fast
