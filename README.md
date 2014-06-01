@@ -162,29 +162,13 @@ would make the Zombie drop diamond axes.
 Note: Please becareful to make sure you return a valid Item ID. 
 
 
-## Change the on-death drops
+## Change the extra on-death drops and drop amounts
 
 - Stop the currently running server
 - Under the net.minecraft.entity.monster package, you will find a number of entities, one of: 
  EntityBlaze, EntityEnderman, EntityGhast, EntityIronGolem, EntityMagmaCube, EntityPigZombie, EntitySkeleton, EntitySnowman, EntitySpider, EntityWitch
 - Open the class for the entity you wish to edit
-- Find the dropFewItems() method
-
-```code
-
-    protected void dropFewItems(boolean par1, int par2) {
-        int j = this.rand.nextInt(3);
-        int k;
-        for (k = 0; k < j; ++k) {
-            this.dropItem(Block.plantRed.blockID, 1);
-        }
-        k = 3 + this.rand.nextInt(3);
-        for (int l = 0; l < k; ++l) {
-            this.dropItem(Item.ingotIron.itemID, 1);
-        }
-    }
-```
-
+- Find the dropFewItems() method, controls additionals drops and amounts of those drops
 - Look for the this.dropItem() method.
 - Change the item specified in the function
 - Or you can change the number of times it loops by changing i & k
