@@ -165,7 +165,8 @@ Note: Please becareful to make sure you return a valid Item ID.
 ## Change the on-death drops
 
 - Stop the currently running server
-- Under the net.minecraft.entity.monster package, you will find a number of entities
+- Under the net.minecraft.entity.monster package, you will find a number of entities, one of: 
+ EntityBlaze, EntityEnderman, EntityGhast, EntityIronGolem, EntityMagmaCube, EntityPigZombie, EntitySkeleton, EntitySnowman, EntitySpider, EntityWitch
 - Open the class for the entity you wish to edit
 - Find the dropFewItems() method
 
